@@ -127,7 +127,104 @@ body{font-family:"IBM Plex Sans",ui-sans-serif,system-ui,"Segoe UI",Roboto,sans-
     <div class="flex gap-2 justify-end mt-2"><button type="button" class="btn" onclick="$('#pw').classList.add('hidden')">Отмена</button><button type="button" class="btn pri" onclick="checkPass()">Войти</button></div>
   </div></div>
 <div id="toast" class="hidden fixed bottom-4 left-1/2 -translate-x-1/2 bg-slate-900 text-white text-sm px-4 py-2 rounded-md z-[10001]"></div>
-<script id="tariffs" type="application/json">{}</script>
+<script id="tariffs" type="application/json">
+{
+  "cur": "$",
+  "passHash": "ec1011b30de16c02b8ba6d383895da68aab883e6386200d17e93fc5f8b54efd3",
+  "updatedAt": "2026-10-02T09:33:38.458Z",
+  "base": 10,
+  "minFee": 15,
+  "cityRate": 0.8,
+  "outRate": 1.2,
+  "cityKm": 25,
+  "stopFee": 5,
+  "zoneOn": true,
+  "zLat": 41.3111,
+  "zLng": 69.2797,
+  "zR": 11,
+  "poly": "",
+  "vehicles": [
+    {
+      "id": "v1",
+      "name": "Курьер",
+      "icon": "bike",
+      "fee": 0,
+      "mult": 0.8
+    },
+    {
+      "id": "v2",
+      "name": "Седан",
+      "icon": "car",
+      "fee": 3,
+      "mult": 1
+    },
+    {
+      "id": "v3",
+      "name": "Фургон",
+      "icon": "truck",
+      "fee": 8,
+      "mult": 1.3
+    },
+    {
+      "id": "v4",
+      "name": "Грузовик 1.5 т",
+      "icon": "truck",
+      "fee": 20,
+      "mult": 1.8
+    }
+  ],
+  "addons": [
+    {
+      "id": "a1",
+      "name": "Подъём без лифта",
+      "type": "unit",
+      "price": 3,
+      "unit": "этаж"
+    },
+    {
+      "id": "a2",
+      "name": "Экспресс",
+      "type": "percent",
+      "price": 30,
+      "unit": "ед."
+    },
+    {
+      "id": "a3",
+      "name": "Терморежим",
+      "type": "fixed",
+      "price": 10,
+      "unit": "ед."
+    },
+    {
+      "id": "a4",
+      "name": "Ожидание (30 мин)",
+      "type": "unit",
+      "price": 4,
+      "unit": "ед."
+    }
+  ],
+  "wTiers": [
+    {
+      "from": 100,
+      "fee": 10
+    },
+    {
+      "from": 500,
+      "fee": 30
+    }
+  ],
+  "vTiers": [
+    {
+      "from": 2,
+      "fee": 8
+    },
+    {
+      "from": 5,
+      "fee": 25
+    }
+  ]
+}
+</script>
 <script>
 const SRC='<!DOCTYPE html>\n'+document.documentElement.outerHTML;
 const $=s=>document.querySelector(s);
